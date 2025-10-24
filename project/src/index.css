@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide all external branding and watermarks */
+a[href*="bolt.new"],
+a[href*="bolt"],
+a[href*="stackblitz"],
+div[class*="watermark"],
+div[class*="badge"],
+div[class*="branding"],
+iframe[title*="bolt"],
+iframe[title*="stackblitz"],
+[data-bolt],
+[data-branding],
+body > div:last-child:not(#root),
+body > a:last-child,
+body > iframe:last-child {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  left: -9999px !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Additional targeting for fixed position badges */
+div[style*="position: fixed"],
+div[style*="position:fixed"] {
+  z-index: -1 !important;
+}
+
+a[style*="position: fixed"],
+a[style*="position:fixed"] {
+  display: none !important;
+}
+
+/* Hide bottom-right corner badges */
+body > *:not(#root) {
+  z-index: -1 !important;
+}
+
+#root {
+  z-index: 1 !important;
+  position: relative !important;
+}
