@@ -55,5 +55,3 @@ src/
 
 ---
 
-**Author:** Mrityunjay Dwivedi
-**Tech:** React • TypeScript • Supabase • Tailwind CSS
